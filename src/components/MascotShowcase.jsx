@@ -2,17 +2,16 @@ import { Sparkles } from 'lucide-react'
 
 export default function MascotShowcase() {
   return (
-    <section id="mascot" className="relative py-20 bg-white overflow-hidden border-b border-slate-100">
+    <section id="mascot" className="relative py-20 bg-[#f4f4f6] overflow-hidden border-b border-zinc-200/80">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Mascot column (5 cols) */}
+          {/* Mascot column (5 cols) - Serious Noir Dossier Badge */}
           <div className="lg:col-span-5 flex justify-center">
-            {/* The Dossier Identity Badge - High-contrast Noir style */}
             <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-3xl bg-zinc-950 border border-zinc-800 p-4.5 shadow-2xl hover:border-zinc-700 transition-all duration-300 group overflow-hidden">
               
-              {/* Subtle light leak shine inside card */}
-              <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-white/[0.01] blur-2xl rounded-full pointer-events-none group-hover:bg-white/[0.02] transition-colors" />
+              {/* Subtle light leak shine */}
+              <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-white/[0.01] blur-2xl rounded-full pointer-events-none" />
 
               <div className="h-full w-full rounded-2xl bg-gradient-to-t from-zinc-900 to-zinc-950 overflow-hidden flex flex-col justify-end p-5 border border-zinc-800/80 relative">
                 
@@ -20,7 +19,7 @@ export default function MascotShowcase() {
                 <div className="absolute inset-0 flex items-center justify-center p-5 pb-20 animate-float group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/chamy_mascot.png"
-                    alt="Vance - Executive Advisor"
+                    alt="Vance - Special Counsel"
                     className="w-full h-auto object-contain max-h-[230px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.65)] select-none pointer-events-none rounded-xl"
                   />
                 </div>
@@ -36,11 +35,11 @@ export default function MascotShowcase() {
             </div>
           </div>
 
-          {/* Info column (7 cols) */}
+          {/* Info column (7 cols) - Original Text Layout */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <span className="text-xs font-bold text-zinc-900 bg-zinc-100 border border-zinc-200 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 w-fit">
-                <Sparkles className="h-3.5 w-3.5 text-zinc-700" /> Preparation Agile
+              <span className="text-xs font-bold text-zinc-900 bg-zinc-100 border border-zinc-200/80 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 w-fit">
+                <Sparkles className="h-3.5 w-3.5 text-zinc-750" /> Preparation Agile
               </span>
               <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
                 Adapt seamlessly to any boardroom panel
@@ -50,7 +49,7 @@ export default function MascotShowcase() {
               </p>
             </div>
 
-            {/* Simple, high-contrast, honest vector bullet points matching the APP_SPEC */}
+            {/* Simple, high-contrast vector bullet points matching the APP_SPEC */}
             <div className="space-y-4 pt-2">
               {[
                 {
