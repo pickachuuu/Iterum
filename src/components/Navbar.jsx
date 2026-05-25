@@ -32,28 +32,28 @@ export default function Navbar() {
           {/* Logo block with LogoSvg */}
           <div className="flex items-center gap-2.5">
             <div className={`flex h-9 w-9 items-center justify-center rounded-lg shadow-sm transition-all duration-300 ${
-              isScrolled ? 'bg-slate-900 text-white' : 'bg-white/10 border border-white/20 text-white'
+              isScrolled ? 'bg-zinc-950 text-white border border-zinc-800' : 'bg-white/10 border border-white/20 text-white'
             }`}>
               <LogoSvg className="h-5 w-5" />
             </div>
             <span className={`font-display text-xl font-bold tracking-tight transition-colors duration-300 ${
-              isScrolled ? 'text-slate-900' : 'text-white'
+              isScrolled ? 'text-zinc-950' : 'text-white'
             }`}>
-              Iterum<span className={isScrolled ? 'text-slate-500 font-normal' : 'text-white/70 font-normal'}>.ai</span>
+              Iterum<span className={isScrolled ? 'text-slate-400 font-normal' : 'text-white/60 font-normal'}>.ai</span>
             </span>
           </div>
 
           {/* Simple Navigation links */}
           <div className={`hidden md:flex items-center gap-8 text-sm font-semibold transition-colors duration-300 ${
-            isScrolled ? 'text-slate-600' : 'text-white/80'
+            isScrolled ? 'text-slate-650' : 'text-white/80'
           }`}>
-            <a href="#why" className={`transition-colors ${isScrolled ? 'hover:text-slate-900' : 'hover:text-white'}`}>
+            <a href="#why" className={`transition-colors ${isScrolled ? 'hover:text-zinc-950' : 'hover:text-white'}`}>
               Why Iterum
             </a>
-            <a href="#rounds" className={`transition-colors ${isScrolled ? 'hover:text-slate-900' : 'hover:text-white'}`}>
+            <a href="#rounds" className={`transition-colors ${isScrolled ? 'hover:text-zinc-950' : 'hover:text-white'}`}>
               Interview Rounds
             </a>
-            <a href="#who" className={`transition-colors ${isScrolled ? 'hover:text-slate-900' : 'hover:text-white'}`}>
+            <a href="#who" className={`transition-colors ${isScrolled ? 'hover:text-zinc-950' : 'hover:text-white'}`}>
               Who is it for
             </a>
           </div>
@@ -61,11 +61,15 @@ export default function Navbar() {
           {/* Clean Action CTAs */}
           <div className="hidden md:flex items-center gap-4">
             <button className={`text-sm font-bold transition-colors duration-300 py-2 px-3 cursor-pointer ${
-              isScrolled ? 'text-slate-650 hover:text-slate-900' : 'text-white/90 hover:text-white'
+              isScrolled ? 'text-slate-650 hover:text-zinc-950' : 'text-white/90 hover:text-white'
             }`}>
               Login
             </button>
-            <button className="text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-accent-orange to-accent-rose hover:brightness-110 active:scale-98 px-6 py-2.5 rounded-full transition-all cursor-pointer shadow-md shadow-orange-500/20">
+            <button className={`text-xs font-black uppercase tracking-wider transition-all cursor-pointer shadow-md rounded-full px-6 py-2.5 active:scale-98 border ${
+              isScrolled 
+                ? 'bg-zinc-950 hover:bg-zinc-900 border-zinc-800 text-white shadow-zinc-950/10' 
+                : 'bg-white hover:bg-slate-100 text-zinc-950 border-transparent shadow-white/5'
+            }`}>
               Start Free
             </button>
           </div>
@@ -74,7 +78,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-2 cursor-pointer transition-colors ${isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white hover:text-white/80'}`}
+              className={`p-2 cursor-pointer transition-colors ${isScrolled ? 'text-slate-650 hover:text-zinc-950' : 'text-white hover:text-white/80'}`}
             >
               {mobileMenuOpen ? <X className="h-5.5 w-5.5" /> : <Menu className="h-5.5 w-5.5" />}
             </button>
@@ -89,21 +93,21 @@ export default function Navbar() {
             <a
               href="#why"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-slate-900 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              className="hover:text-zinc-950 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
             >
               Why Iterum
             </a>
             <a
               href="#rounds"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-slate-900 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              className="hover:text-zinc-950 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
             >
               Interview Rounds
             </a>
             <a
               href="#who"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-slate-900 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              className="hover:text-zinc-950 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
             >
               Who is it for
             </a>
@@ -112,10 +116,10 @@ export default function Navbar() {
           <hr className="border-slate-100" />
 
           <div className="flex flex-col gap-2.5">
-            <button className="w-full text-center text-slate-750 border border-slate-250 py-2.5 rounded-full hover:bg-slate-50 text-sm font-semibold cursor-pointer">
+            <button className="w-full text-center text-slate-700 border border-slate-200 py-2.5 rounded-full hover:bg-slate-50 text-sm font-semibold cursor-pointer">
               Login
             </button>
-            <button className="w-full text-center text-white bg-gradient-to-r from-accent-orange to-accent-rose py-2.5 rounded-full hover:brightness-110 text-sm font-bold shadow-md shadow-orange-500/20 cursor-pointer">
+            <button className="w-full text-center text-white bg-zinc-950 border border-zinc-800 py-2.5 rounded-full hover:bg-zinc-900 text-sm font-bold shadow-md cursor-pointer">
               Start Free
             </button>
           </div>

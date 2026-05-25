@@ -8,26 +8,30 @@ export default function MascotShowcase() {
           
           {/* Mascot column (5 cols) */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-3xl bg-white border border-slate-200 p-4 shadow-sm hover:border-brand-500/40 hover:shadow-md transition-all duration-200">
-              <div className="h-full w-full rounded-2xl bg-slate-50/50 overflow-hidden flex flex-col justify-end p-5 border border-slate-150 relative">
+            {/* The Dossier Identity Badge - High-contrast Noir style */}
+            <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-3xl bg-zinc-950 border border-zinc-800 p-4.5 shadow-2xl hover:border-zinc-700 transition-all duration-300 group overflow-hidden">
+              
+              {/* Subtle light leak shine inside card */}
+              <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-white/[0.01] blur-2xl rounded-full pointer-events-none group-hover:bg-white/[0.02] transition-colors" />
+
+              <div className="h-full w-full rounded-2xl bg-gradient-to-t from-zinc-900 to-zinc-950 overflow-hidden flex flex-col justify-end p-5 border border-zinc-800/80 relative">
                 
-                {/* AI Generated Mascot resembling Logo */}
-                <div className="absolute inset-0 flex items-center justify-center p-6 pb-20 animate-float">
+                {/* AI Generated Mascot: Front facing chameleon in suit with Noir vibes */}
+                <div className="absolute inset-0 flex items-center justify-center p-5 pb-20 animate-float group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/chamy_mascot.png"
-                    alt="Chamy the Chameleon Mascot"
-                    className="w-full h-auto object-contain max-h-[220px] drop-shadow-[0_15px_30px_rgba(37,99,235,0.15)] select-none pointer-events-none"
+                    alt="Vance - Executive Advisor"
+                    className="w-full h-auto object-contain max-h-[230px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.65)] select-none pointer-events-none rounded-xl"
                   />
                 </div>
 
-                {/* Clean detail banner */}
-                <div className="bg-white border border-slate-200/80 rounded-xl p-3.5 relative z-10 shadow-3xs">
-                  <p className="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Iterum Mascot</p>
-                  <h4 className="font-display font-bold text-slate-900 text-base mt-0.5">Chamy the Chameleon</h4>
-                  <p className="text-slate-500 text-xs mt-1 leading-relaxed font-sans">
-                    An AI-generated mascot designed to match our circular infinity loop brand logo.
-                  </p>
+                {/* Stark, Serious Noir Dossier Identifier (No description text!) */}
+                <div className="bg-zinc-950/80 backdrop-blur-xs border border-zinc-850 rounded-xl p-3.5 relative z-10 shadow-lg text-left">
+                  <p className="text-[8px] font-black text-zinc-500 uppercase tracking-widest">Iterum Executive Advisor</p>
+                  <h4 className="font-display font-black text-white text-lg tracking-tight mt-0.5 uppercase tracking-wide">Vance</h4>
+                  <div className="h-0.5 w-6 bg-zinc-700 mt-2 rounded"></div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -35,14 +39,14 @@ export default function MascotShowcase() {
           {/* Info column (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <span className="text-xs font-bold text-brand-600 uppercase tracking-widest flex items-center gap-1.5">
-                <Sparkles className="h-4 w-4 text-brand-500" /> Preparation Agile
+              <span className="text-xs font-bold text-zinc-900 bg-zinc-100 border border-zinc-200 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 w-fit">
+                <Sparkles className="h-3.5 w-3.5 text-zinc-700" /> Preparation Agile
               </span>
-              <h2 className="font-display text-3xl font-extrabold text-slate-900 tracking-tight mt-2 sm:text-4xl">
-                Practice interview adaptability with Chamy
+              <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
+                Adapt seamlessly to any boardroom panel
               </h2>
-              <p className="mt-4 text-base text-slate-605 leading-relaxed font-sans">
-                Chameleons shift seamlessly to match their surroundings. In modern interviews, you must do the exact same: adjusting your answers to highlight relevant milestones, aligning with different team cultures, and solving variable technical constraints. Iterum acts as your training partner, building this critical flexibility before your actual panel.
+              <p className="mt-4 text-base sm:text-lg text-slate-550 leading-relaxed font-sans font-medium">
+                Chameleons shift seamlessly to match their surroundings. In high-stakes interviews, you must do the exact same: adjusting your answers to highlight relevant milestones, aligning with different team dynamics, and navigating diverse boardroom cultures. Iterum acts as your premier training partner, establishing this adaptability before you step in.
               </p>
             </div>
 
@@ -57,7 +61,7 @@ export default function MascotShowcase() {
                 {
                   num: '02',
                   title: 'Tailored Practice Rounds',
-                  desc: 'Select or create custom interview rounds (HR screen, behavioral, coding, system design, hiring manager, or team fit) with dynamic, round-specific AI feedback.'
+                  desc: 'Select or create custom interview rounds (HR screen, behavioral, domain panels, hiring manager, or team fit) with dynamic, round-specific AI feedback.'
                 },
                 {
                   num: '03',
@@ -65,13 +69,13 @@ export default function MascotShowcase() {
                   desc: 'Sign in securely using Supabase Auth (OAuth or email/password). All uploaded resumes and database records are private, using Row-Level Security policies.'
                 }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-3.5">
-                  <div className="h-8 w-8 rounded-xl bg-brand-50 border border-brand-100 text-brand-600 font-mono font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div key={idx} className="flex gap-4">
+                  <div className="h-8.5 w-8.5 rounded-xl bg-zinc-900 border border-zinc-950 text-white font-mono font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                     {item.num}
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-slate-950 text-sm leading-tight">{item.title}</h4>
-                    <p className="text-slate-500 text-xs mt-1.5 leading-relaxed font-sans">{item.desc}</p>
+                    <h4 className="font-sans font-extrabold text-zinc-950 text-sm leading-tight">{item.title}</h4>
+                    <p className="text-slate-500 text-xs mt-1.5 leading-relaxed font-sans font-semibold">{item.desc}</p>
                   </div>
                 </div>
               ))}

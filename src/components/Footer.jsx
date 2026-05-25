@@ -39,22 +39,22 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-slate-50/70 text-slate-500 pt-20 pb-12 border-t border-slate-200/85 overflow-hidden">
+    <footer className="relative bg-slate-50/70 text-slate-550 pt-20 pb-12 border-t border-slate-200/85 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 space-y-16">
         
         {/* Crisp White CTA card */}
-        <div className="bg-white border border-slate-200 hover:border-brand-500/30 rounded-3xl p-8 md:p-10 text-center space-y-5 max-w-4xl mx-auto shadow-2xs relative transition-colors duration-200">
-          <h3 className="font-display font-extrabold text-slate-900 text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug">
+        <div className="bg-white border border-slate-200 hover:border-zinc-500/30 rounded-3xl p-8 md:p-10 text-center space-y-5 max-w-4xl mx-auto shadow-2xs relative transition-colors duration-300">
+          <h3 className="font-display font-black text-slate-900 text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug">
             Ready to structure your interview practice?
           </h3>
-          <p className="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-sans font-medium">
-            Join candidates from top engineering and product teams who rehearse their career stories with Chamy’s adaptive mockup panels.
+          <p className="text-slate-500 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-sans font-semibold">
+            Join candidates from top engineering and product teams who rehearse their career stories with Vance’s adaptive mockup panels.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-gradient-to-r from-accent-orange to-accent-rose hover:brightness-110 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md shadow-orange-500/20">
+            <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-zinc-950 hover:bg-zinc-900 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md shadow-zinc-950/20 border border-zinc-800">
               Start preparing free
             </button>
-            <button className="w-full sm:w-auto font-sans font-bold text-xs text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-3xs">
+            <button className="w-full sm:w-auto font-sans font-bold text-xs text-slate-700 bg-white border border-slate-350 hover:bg-slate-50 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-3xs">
               View study metrics
             </button>
           </div>
@@ -128,16 +128,16 @@ export default function Footer() {
         </div>
 
         {/* Footer bottom */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 pt-10 border-t border-slate-200/50 text-slate-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 pt-10 border-t border-slate-200/50 text-slate-550">
           
           {/* Logo & corporate address */}
           <div className="space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-900 text-white shadow-sm">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-zinc-950 text-white shadow-sm border border-zinc-850">
                 <LogoSvg className="h-4.5 w-4.5" />
               </div>
-              <span className="font-display text-lg font-bold tracking-tight text-slate-900">
-                Iterum<span className="text-slate-450 font-normal">.ai</span>
+              <span className="font-display text-lg font-bold tracking-tight text-zinc-950">
+                Iterum<span className="text-slate-400 font-normal">.ai</span>
               </span>
             </div>
             <p className="text-xs text-slate-500 leading-relaxed font-sans">
@@ -156,7 +156,7 @@ export default function Footer() {
               <a href="#" className="hover:text-slate-800 transition-colors"><LinkedinIcon className="h-4 w-4" /></a>
             </div>
 
-            <div className="text-xs text-slate-450 font-sans md:text-right">
+            <div className="text-xs text-slate-400 font-sans md:text-right">
               <p>© {currentYear} Iterum.ai. All rights reserved. All mock records held in privacy configurations.</p>
             </div>
           </div>

@@ -34,67 +34,69 @@ export default function Hero() {
   const activeQA = qaData[activeProfile] || qaData['swe']
 
   return (
-    <header className="relative bg-gradient-to-b from-blue-600 via-indigo-655 to-purple-700 pt-36 pb-36 overflow-hidden flex flex-col justify-center text-center">
-      {/* Saturated visual decorative blur mesh */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-cyan-400/20 blur-[130px] pointer-events-none animate-pulse-slow"></div>
-      <div className="absolute bottom-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-rose-500/10 blur-[120px] pointer-events-none"></div>
+    <header className="relative bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 pt-36 pb-36 overflow-hidden flex flex-col justify-center text-center">
+      
+      {/* Cinematic smokey noir visual glows */}
+      <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-white/[0.03] blur-[130px] pointer-events-none animate-pulse-slow"></div>
+      <div className="absolute bottom-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-zinc-800/20 blur-[120px] pointer-events-none"></div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10">
+        
         {/* Headline */}
-        <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl max-w-4xl mx-auto leading-[1.12] drop-shadow-sm">
+        <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl max-w-4xl mx-auto leading-[1.12] drop-shadow-lg">
           AI-powered job interview practice.
         </h1>
 
         {/* Subtext */}
-        <p className="mt-6 max-w-2xl text-lg text-white/85 mx-auto leading-relaxed font-sans font-medium">
+        <p className="mt-6 max-w-2xl text-lg text-slate-400 mx-auto leading-relaxed font-sans font-medium">
           Create role-specific job profiles, upload your resume, and conduct realistic practice rounds with dynamic AI questions and feedback tailored to your background.
         </p>
 
-        {/* Action Buttons (Animaker Style) */}
+        {/* Noir Premium Action Buttons */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4.5">
-          <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-gradient-to-r from-accent-orange to-accent-rose hover:brightness-110 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-orange-500/20 transition-all cursor-pointer">
+          <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-slate-100 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-white/5 transition-all cursor-pointer border border-white/10">
             Start practicing free
           </button>
-          <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-white/10 border border-white/20 hover:bg-white/20 active:scale-98 px-8 py-4.5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm">
+          <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-zinc-900/40 border border-zinc-800 hover:bg-zinc-850 active:scale-98 px-8 py-4.5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm">
             See how it works
           </button>
         </div>
 
         {/* Brand reference row */}
-        <p className="mt-14 text-[10px] font-black text-white/60 uppercase tracking-widest">
+        <p className="mt-14 text-[10px] font-black text-slate-500 uppercase tracking-widest">
           Prepare for target roles at
         </p>
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-display font-bold text-white/70 text-xs tracking-wide">
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-display font-bold text-slate-400 text-xs tracking-wide">
           <span className="hover:text-white transition-colors duration-200 cursor-default">Google</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-white/20"></span>
+          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
           <span className="hover:text-white transition-colors duration-200 cursor-default">Stripe</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-white/20"></span>
+          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
           <span className="hover:text-white transition-colors duration-200 cursor-default">Airbnb</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-white/20"></span>
+          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
           <span className="hover:text-white transition-colors duration-200 cursor-default">Amazon</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-white/20"></span>
+          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
           <span className="hover:text-white transition-colors duration-200 cursor-default">Netflix</span>
         </div>
 
-        {/* 100% Legit Light-Mode App Mockup representing actual spec logic */}
-        <div className="mt-16 relative mx-auto w-full max-w-4xl rounded-xl border border-white/10 bg-white p-2.5 shadow-2xl shadow-slate-900/30 z-20">
+        {/* Premium Noir App Mockup representing actual spec logic */}
+        <div className="mt-16 relative mx-auto w-full max-w-4xl rounded-xl border border-zinc-800 bg-zinc-900 p-2 shadow-2xl shadow-black/80 z-20">
           
           {/* Header bar */}
-          <div className="flex items-center gap-1.5 px-3 py-2 border-b border-slate-100 bg-slate-50/50 rounded-t-lg text-xs text-slate-400">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200"></span>
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200"></span>
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200"></span>
-            <span className="ml-4 font-mono text-[10px] text-slate-400">app.iterum.ai/practice-session</span>
+          <div className="flex items-center gap-1.5 px-3 py-2 border-b border-zinc-800 bg-zinc-950/60 rounded-t-lg text-xs text-zinc-500">
+            <span className="h-2 w-2 rounded-full bg-zinc-800"></span>
+            <span className="h-2 w-2 rounded-full bg-zinc-800"></span>
+            <span className="h-2 w-2 rounded-full bg-zinc-800"></span>
+            <span className="ml-4 font-mono text-[9px] text-zinc-500">app.iterum.ai/practice-session</span>
           </div>
 
-          {/* Clean Dashboard matching spec structure */}
-          <div className="grid grid-cols-1 md:grid-cols-4 border border-slate-150 rounded-b-lg overflow-hidden bg-white text-left text-slate-800 min-h-[440px]">
+          {/* High-Contrast Noir Dashboard matching spec structure */}
+          <div className="grid grid-cols-1 md:grid-cols-4 border border-zinc-800/80 rounded-b-lg overflow-hidden bg-zinc-950 text-left text-slate-200 min-h-[440px]">
             
             {/* Sidebar: Job Profiles & Linked Resume */}
-            <div className="bg-slate-50 border-r border-slate-200 p-4 space-y-6">
+            <div className="bg-zinc-900/40 border-r border-zinc-800/60 p-4 space-y-6">
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
-                  <Briefcase className="h-3.5 w-3.5 text-slate-450" /> Active Profile
+                <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-2.5 flex items-center gap-2">
+                  <Briefcase className="h-3.5 w-3.5 text-zinc-600" /> Active Profile
                 </p>
                 <div className="space-y-1.5">
                   {profiles.map(p => (
@@ -103,73 +105,73 @@ export default function Hero() {
                       onClick={() => setActiveProfile(p.id)}
                       className={`w-full text-left p-2.5 rounded-lg border transition-all text-xs cursor-pointer ${
                         activeProfile === p.id
-                          ? 'bg-white border-slate-350 text-slate-950 font-semibold shadow-2xs'
-                          : 'bg-transparent border-transparent text-slate-550 hover:bg-slate-200/50 hover:text-slate-850'
+                          ? 'bg-zinc-900 border-zinc-700 text-white font-semibold shadow-xs'
+                          : 'bg-transparent border-transparent text-zinc-400 hover:bg-zinc-900/50 hover:text-white'
                       }`}
                     >
                       <div className="flex justify-between items-center">
-                        <span className="font-bold text-slate-850">{p.company}</span>
-                        <span className="text-[9px] text-slate-400 font-medium">{p.location}</span>
+                        <span className="font-bold text-zinc-100">{p.company}</span>
+                        <span className="text-[9px] text-zinc-500 font-medium">{p.location}</span>
                       </div>
-                      <p className="text-slate-500 font-medium mt-0.5">{p.role}</p>
+                      <p className="text-zinc-400 font-medium mt-0.5">{p.role}</p>
                     </button>
                   ))}
                 </div>
               </div>
 
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
-                  <FileText className="h-3.5 w-3.5 text-slate-450" /> Associated Resume
+                <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-2.5 flex items-center gap-2">
+                  <FileText className="h-3.5 w-3.5 text-zinc-600" /> Linked Resume
                 </p>
-                <div className="bg-white border border-slate-200 rounded-lg p-2.5 flex items-center justify-between text-xs shadow-3xs">
-                  <div className="flex items-center gap-2.5 text-slate-700 min-w-0">
-                    <div className="h-7 w-7 rounded bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[9px]">PDF</div>
+                <div className="bg-zinc-900/60 border border-zinc-800 rounded-lg p-2.5 flex items-center justify-between text-xs shadow-inner">
+                  <div className="flex items-center gap-2.5 text-zinc-300 min-w-0">
+                    <div className="h-7 w-7 rounded bg-zinc-800 text-zinc-400 flex items-center justify-center font-bold text-[9px]">PDF</div>
                     <div className="truncate">
-                      <p className="font-semibold truncate text-slate-800">Resume.pdf</p>
-                      <p className="text-[9px] text-slate-400"> linked context</p>
+                      <p className="font-semibold truncate text-zinc-200">Resume.pdf</p>
+                      <p className="text-[9px] text-zinc-500"> parsed context</p>
                     </div>
                   </div>
-                  <div className="h-4.5 w-4.5 rounded-full bg-slate-900 flex items-center justify-center text-white flex-shrink-0">
-                    <Check className="h-2.5 w-2.5" />
+                  <div className="h-4.5 w-4.5 rounded-full bg-white text-zinc-950 flex items-center justify-center flex-shrink-0">
+                    <Check className="h-2.5 w-2.5 stroke-[3]" />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* AI Practice Workspace: dynamic questions, responses, feedback */}
-            <div className="md:col-span-3 p-5 md:p-6 flex flex-col justify-between gap-5 bg-white">
+            <div className="md:col-span-3 p-5 md:p-6 flex flex-col justify-between gap-5 bg-zinc-950">
               
               {/* Generated Question */}
               <div className="space-y-1.5">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <HelpCircle className="h-3.5 w-3.5 text-slate-400" /> AI Generated Question
+                <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider flex items-center gap-1.5">
+                  <HelpCircle className="h-3.5 w-3.5 text-zinc-650" /> AI Generated Question
                 </p>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-slate-800 text-xs sm:text-sm leading-relaxed font-semibold">
+                <div className="bg-zinc-900/40 border border-zinc-800 rounded-xl p-3.5 text-white text-xs sm:text-sm leading-relaxed font-medium">
                   "{activeQA.question}"
                 </div>
               </div>
 
               {/* User Answer */}
               <div className="space-y-1.5">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <MessageSquare className="h-3.5 w-3.5 text-slate-400" /> Your Response
+                <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider flex items-center gap-1.5">
+                  <MessageSquare className="h-3.5 w-3.5 text-zinc-650" /> Your Response
                 </p>
-                <div className="bg-white border border-slate-200 rounded-xl p-3.5 text-slate-700 text-xs sm:text-sm leading-relaxed min-h-[80px]">
+                <div className="bg-zinc-900/20 border border-zinc-800/80 rounded-xl p-3.5 text-zinc-300 text-xs sm:text-sm leading-relaxed min-h-[80px]">
                   {activeQA.answer}
                 </div>
               </div>
 
               {/* Legit feedback and follow-ups based on APP_SPEC */}
-              <div className="border-t border-slate-150 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="border-t border-zinc-800/80 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">AI feedback & suggestions</p>
-                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-655 font-sans leading-relaxed">
+                  <p className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider">AI feedback & suggestions</p>
+                  <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-3 text-xs text-zinc-400 font-sans leading-relaxed">
                     {activeQA.feedback}
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">AI follow-up question</p>
-                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-655 font-sans leading-relaxed italic">
+                  <p className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider">AI follow-up question</p>
+                  <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-3 text-xs text-zinc-400 font-sans leading-relaxed italic">
                     "{activeQA.followUp}"
                   </div>
                 </div>
@@ -181,7 +183,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Sweeping organic White Curve separator (Vibes of Animaker) */}
+      {/* Sweeping organic White Curve separator */}
       <div className="absolute bottom-0 inset-x-0 h-16 bg-white rounded-t-[48px] pointer-events-none z-10"></div>
     </header>
   )
