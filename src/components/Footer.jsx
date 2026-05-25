@@ -39,7 +39,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-slate-50/70 text-slate-550 pt-20 pb-12 border-t border-slate-200/85 overflow-hidden">
+    <footer className="relative bg-[#f4f4f6] text-slate-650 pt-20 pb-12 border-t border-zinc-200/80 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 space-y-16">
         
         {/* Crisp White CTA card */}

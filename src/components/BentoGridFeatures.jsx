@@ -2,7 +2,7 @@ import { Check } from 'lucide-react'
 
 export default function BentoGridFeatures() {
   return (
-    <section id="why" className="relative py-20 bg-white overflow-hidden border-b border-slate-100">
+    <section id="why" className="relative py-20 bg-[#f4f4f6] overflow-hidden border-b border-zinc-200/80">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Header */}

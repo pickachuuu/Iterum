@@ -183,8 +183,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Sweeping organic White Curve separator */}
-      <div className="absolute bottom-0 inset-x-0 h-16 bg-white rounded-t-[48px] pointer-events-none z-10"></div>
+      {/* Sweeping organic Off-White Curve separator */}
+      <div className="absolute bottom-0 inset-x-0 h-16 bg-[#f4f4f6] rounded-t-[48px] pointer-events-none z-10"></div>
     </header>
   )
 }
