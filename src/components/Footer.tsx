@@ -46,7 +46,7 @@ export default function Footer({ onStartFreeClick }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-zinc-950 text-zinc-400 pt-20 pb-12 border-t border-zinc-900 overflow-hidden">
+    <footer className="relative text-zinc-400 pt-20 pb-12 border-t border-zinc-900 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 space-y-12">
         
         {/* Premium Dark Glassmorphic CTA card */}
@@ -55,7 +55,7 @@ export default function Footer({ onStartFreeClick }: FooterProps) {
             Ready to structure your interview practice?
           </h3>
           <p className="text-zinc-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-sans font-semibold">
-            Join candidates from top engineering and product teams who rehearse their career stories with Vance’s adaptive mockup panels.
+            Join candidates from top engineering and product teams who rehearse their career stories with Iterum's AI mock interviews.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <button 

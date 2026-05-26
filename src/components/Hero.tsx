@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FileText, Briefcase, MessageSquare, Check, HelpCircle } from 'lucide-react'
-import Grainient from './Grainient'
+
 import ScrollReveal from './ScrollReveal'
 
 type ProfileId = 'swe' | 'pm' | 'ds'
@@ -56,37 +56,9 @@ export default function Hero({ onStartFreeClick }: HeroProps) {
   const activeQA = qaData[activeProfile]
 
   return (
-    <header className="relative bg-zinc-950 min-h-screen pt-28 pb-20 overflow-hidden flex flex-col justify-center items-center text-center">
+    <header className="relative min-h-screen pt-28 pb-20 overflow-hidden flex flex-col justify-center items-center text-center">
       
-      {/* Animated WebGL Grainient Background */}
-      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
-        <Grainient
-          color1="#4b4b4b"
-          color2="#000000"
-          color3="#4e4c50"
-          timeSpeed={0.6}
-          colorBalance={-0.03}
-          warpStrength={1.85}
-          warpFrequency={5.0}
-          warpSpeed={2.0}
-          warpAmplitude={9}
-          blendAngle={0.0}
-          blendSoftness={0.05}
-          rotationAmount={500.0}
-          noiseScale={1.25}
-          grainAmount={0.1}
-          grainScale={2.0}
-          grainAnimated={false}
-          contrast={1.25}
-          gamma={1.0}
-          saturation={1.0}
-          centerX={0.0}
-          centerY={0.0}
-          zoom={0.9}
-        />
-        {/* Moody gradient masks to blend Grainient with dark header and curved section divider */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-transparent to-zinc-950" />
-      </div>
+
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10">
         
