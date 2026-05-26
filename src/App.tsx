@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import MascotShowcase from './components/MascotShowcase'
 import InterviewCarousel from './components/InterviewCarousel'
 import BentoGridFeatures from './components/BentoGridFeatures'
-import PersonaTabs from './components/PersonaTabs'
 import Footer from './components/Footer'
 import AuthModal from './components/AuthModal'
 
@@ -38,9 +37,6 @@ function App() {
 
       {/* Bento Grid Feature Showcase */}
       <BentoGridFeatures />
-
-      {/* Target Audiences Persona Tabs */}
-      <PersonaTabs />
 
       {/* Clean Footer */}
       <Footer onStartFreeClick={openRegister} />
