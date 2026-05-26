@@ -101,12 +101,12 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop with premium glassmorphic blur */}
       <div 
-        className="absolute inset-0 bg-zinc-950/70 backdrop-blur-sm transition-opacity duration-300"
+        className="absolute inset-0 bg-zinc-950/70 backdrop-blur-sm animate-backdrop-fade-in"
         onClick={onClose}
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-[960px] h-auto min-h-[580px] bg-white rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/80 flex flex-col md:flex-row animate-in fade-in zoom-in-95 duration-200 z-10">
+      <div className="relative w-full max-w-[960px] h-auto min-h-[580px] bg-white rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/80 flex flex-col md:flex-row animate-modal-slide-down z-10">
         
         {/* Close Button */}
         <button 
