@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { FileText, Briefcase, MessageSquare, Check, HelpCircle } from 'lucide-react'
+import Grainient from './Grainient'
+import ScrollReveal from './ScrollReveal'
 
 type ProfileId = 'swe' | 'pm' | 'ds'
 
@@ -54,55 +56,91 @@ export default function Hero({ onStartFreeClick }: HeroProps) {
   const activeQA = qaData[activeProfile]
 
   return (
-    <header className="relative bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 pt-36 pb-36 overflow-hidden flex flex-col justify-center text-center">
+    <header className="relative bg-zinc-950 min-h-screen pt-28 pb-20 overflow-hidden flex flex-col justify-center items-center text-center">
       
-      {/* Cinematic smokey noir visual glows */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-white/[0.03] blur-[130px] pointer-events-none animate-pulse-slow"></div>
-      <div className="absolute bottom-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-zinc-800/20 blur-[120px] pointer-events-none"></div>
+      {/* Animated WebGL Grainient Background */}
+      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <Grainient
+          color1="#4b4b4b"
+          color2="#000000"
+          color3="#4e4c50"
+          timeSpeed={0.6}
+          colorBalance={-0.03}
+          warpStrength={1.85}
+          warpFrequency={5.0}
+          warpSpeed={2.0}
+          warpAmplitude={9}
+          blendAngle={0.0}
+          blendSoftness={0.05}
+          rotationAmount={500.0}
+          noiseScale={1.25}
+          grainAmount={0.1}
+          grainScale={2.0}
+          grainAnimated={false}
+          contrast={1.25}
+          gamma={1.0}
+          saturation={1.0}
+          centerX={0.0}
+          centerY={0.0}
+          zoom={0.9}
+        />
+        {/* Moody gradient masks to blend Grainient with dark header and curved section divider */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-transparent to-zinc-950" />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10">
         
         {/* Headline */}
-        <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl max-w-4xl mx-auto leading-[1.12] drop-shadow-lg">
-          AI-powered job interview practice.
-        </h1>
-
+        <ScrollReveal variant="fade-up" duration="duration-700">
+          <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl max-w-4xl mx-auto leading-[1.12] drop-shadow-lg">
+            AI-powered job interview practice.
+          </h1>
+        </ScrollReveal>
+        
         {/* Subtext */}
-        <p className="mt-6 max-w-2xl text-lg text-slate-400 mx-auto leading-relaxed font-sans font-medium">
-          Create role-specific job profiles, upload your resume, and conduct realistic practice rounds with dynamic AI questions and feedback tailored to your background.
-        </p>
-
+        <ScrollReveal variant="fade-up" delay="delay-100" duration="duration-700">
+          <p className="mt-6 max-w-2xl text-lg text-slate-400 mx-auto leading-relaxed font-sans font-medium">
+            Create role-specific job profiles, upload your resume, and conduct realistic practice rounds with dynamic AI questions and feedback tailored to your background.
+          </p>
+        </ScrollReveal>
+        
         {/* Noir Premium Action Buttons */}
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4.5">
-          <button 
-            onClick={onStartFreeClick}
-            className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-slate-100 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-white/5 transition-all cursor-pointer border border-white/10"
-          >
-            Start practicing free
-          </button>
-          <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-zinc-900/40 border border-zinc-800 hover:bg-zinc-850 active:scale-98 px-8 py-4.5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm">
-            See how it works
-          </button>
-        </div>
-
+        <ScrollReveal variant="fade-up" delay="delay-200" duration="duration-700">
+          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4.5">
+            <button 
+              onClick={onStartFreeClick}
+              className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-slate-100 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-white/5 transition-all cursor-pointer border border-white/10"
+            >
+              Start practicing free
+            </button>
+            <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-zinc-900/40 border border-zinc-800 hover:bg-zinc-850 active:scale-98 px-8 py-4.5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm">
+              See how it works
+            </button>
+          </div>
+        </ScrollReveal>
+        
         {/* Brand reference row */}
-        <p className="mt-14 text-[10px] font-black text-slate-500 uppercase tracking-widest">
-          Prepare for target roles at
-        </p>
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-display font-bold text-slate-400 text-xs tracking-wide">
-          <span className="hover:text-white transition-colors duration-200 cursor-default">Google</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
-          <span className="hover:text-white transition-colors duration-200 cursor-default">Stripe</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
-          <span className="hover:text-white transition-colors duration-200 cursor-default">Airbnb</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
-          <span className="hover:text-white transition-colors duration-200 cursor-default">Amazon</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
-          <span className="hover:text-white transition-colors duration-200 cursor-default">Netflix</span>
-        </div>
+        <ScrollReveal variant="fade-in" delay="delay-300" duration="duration-1000">
+          <div>
+            <p className="mt-14 text-[10px] font-black text-slate-500 uppercase tracking-widest">
+              Prepare for target roles at
+            </p>
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-display font-bold text-slate-400 text-xs tracking-wide">
+              <span className="hover:text-white transition-colors duration-200 cursor-default">Google</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
+              <span className="hover:text-white transition-colors duration-200 cursor-default">Stripe</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
+              <span className="hover:text-white transition-colors duration-200 cursor-default">Airbnb</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
+              <span className="hover:text-white transition-colors duration-200 cursor-default">Amazon</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-zinc-800"></span>
+              <span className="hover:text-white transition-colors duration-200 cursor-default">Netflix</span>
+            </div>
+          </div>
+        </ScrollReveal>
 
         {/* Premium Noir App Mockup representing actual spec logic */}
-        <div className="mt-16 relative mx-auto w-full max-w-4xl rounded-xl border border-zinc-800 bg-zinc-900 p-2 shadow-2xl shadow-black/80 z-20">
+        <ScrollReveal variant="scale-up" delay="delay-400" className="mt-16 relative mx-auto w-full max-w-4xl rounded-xl border border-zinc-800 bg-zinc-900 p-2 shadow-2xl shadow-black/80 z-20">
           
           {/* Header bar */}
           <div className="flex items-center gap-1.5 px-3 py-2 border-b border-zinc-800 bg-zinc-950/60 rounded-t-lg text-xs text-zinc-500">
@@ -203,11 +241,9 @@ export default function Hero({ onStartFreeClick }: HeroProps) {
             </div>
 
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
-      {/* Sweeping organic Off-White Curve separator */}
-      <div className="absolute bottom-0 inset-x-0 h-16 bg-[#f4f4f6] rounded-t-[48px] pointer-events-none z-10"></div>
     </header>
   )
 }

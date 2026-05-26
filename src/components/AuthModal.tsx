@@ -133,27 +133,27 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
             {/* Form Title & Subtitle */}
             <div className="mb-6">
               {mode === 'login' && (
-                <>
+                <div className="animate-in fade-in duration-200">
                   <h3 className="font-display text-2xl font-black text-zinc-950 tracking-tight leading-none">
                     Welcome back
                   </h3>
                   <p className="text-slate-500 text-xs mt-2 font-sans font-medium">
                     Access your personalized interview simulations and metrics.
                   </p>
-                </>
+                </div>
               )}
               {mode === 'register' && (
-                <>
+                <div className="animate-in fade-in duration-200">
                   <h3 className="font-display text-2xl font-black text-zinc-950 tracking-tight leading-none">
                     Create account
                   </h3>
                   <p className="text-slate-500 text-xs mt-2 font-sans font-medium">
                     Start your structured career training journey today.
                   </p>
-                </>
+                </div>
               )}
               {mode === 'forgot' && (
-                <>
+                <div className="animate-in fade-in duration-200">
                   <button 
                     onClick={() => { setMode('login'); setMessage(null); }}
                     className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 hover:text-zinc-950 mb-3 transition-colors cursor-pointer"
@@ -166,7 +166,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
                   <p className="text-slate-500 text-xs mt-2 font-sans font-medium">
                     We will send you instructions to reset your password.
                   </p>
-                </>
+                </div>
               )}
             </div>
 
@@ -188,7 +188,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
 
             {/* Google OAuth (only for login & register modes) */}
             {mode !== 'forgot' && (
-              <>
+              <div className="animate-in fade-in slide-in-from-top-1 duration-200">
                 <button
                   type="button"
                   onClick={handleGoogleLogin}
@@ -215,14 +215,14 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
                   </svg>
                   <span>Continue with Google</span>
                 </button>
-
+ 
                 {/* Divider */}
                 <div className="flex items-center gap-3 my-5">
                   <div className="h-px bg-zinc-200 flex-grow" />
                   <span className="text-[10px] font-bold text-zinc-450 uppercase tracking-widest">or email login</span>
                   <div className="h-px bg-zinc-200 flex-grow" />
                 </div>
-              </>
+              </div>
             )}
 
             {/* Standard Credentials Form */}

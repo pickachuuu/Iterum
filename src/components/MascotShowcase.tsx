@@ -1,3 +1,5 @@
+import ScrollReveal from './ScrollReveal'
+
 type MascotFeature = {
   num: string
   title: string
@@ -24,12 +26,15 @@ const mascotFeatures: MascotFeature[] = [
 
 export default function MascotShowcase() {
   return (
-    <section id="mascot" className="relative py-20 bg-[#f4f4f6] overflow-hidden border-b border-zinc-200/80">
+    <section id="mascot" className="relative py-20 bg-zinc-950 overflow-hidden">
+      {/* Rounded light transition overlay */}
+      <div className="absolute inset-0 bg-[#f4f4f6] rounded-t-[48px] z-0 border-b border-zinc-200/80" />
+      
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Mascot column (5 cols) - Serious Noir Dossier Badge */}
-          <div className="lg:col-span-5 flex justify-center">
+          <ScrollReveal variant="scale-up" duration="duration-700" className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-3xl bg-zinc-950 border border-zinc-800 p-4.5 shadow-2xl hover:border-zinc-700 transition-all duration-300 group overflow-hidden">
               
               {/* Subtle light leak shine */}
@@ -55,32 +60,39 @@ export default function MascotShowcase() {
 
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Info column (7 cols) - Original Text Layout */}
           <div className="lg:col-span-7 space-y-6">
-            <div>
-
-              <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
-                Adapt seamlessly to any boardroom panel
-              </h2>
-              <p className="mt-4 text-base sm:text-lg text-slate-550 leading-relaxed font-sans font-medium">
-                Chameleons shift seamlessly to match their surroundings. In high-stakes interviews, you must do the exact same: adjusting your answers to highlight relevant milestones, aligning with different team dynamics, and navigating diverse boardroom cultures. Iterum acts as your premier training partner, establishing this adaptability before you step in.
-              </p>
-            </div>
-
+            <ScrollReveal variant="fade-up">
+              <div>
+                <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
+                  Adapt seamlessly to any boardroom panel
+                </h2>
+                <p className="mt-4 text-base sm:text-lg text-slate-550 leading-relaxed font-sans font-medium">
+                  Chameleons shift seamlessly to match their surroundings. In high-stakes interviews, you must do the exact same: adjusting your answers to highlight relevant milestones, aligning with different team dynamics, and navigating diverse boardroom cultures. Iterum acts as your premier training partner, establishing this adaptability before you step in.
+                </p>
+              </div>
+            </ScrollReveal>
+ 
             {/* Simple, high-contrast vector bullet points matching the APP_SPEC */}
             <div className="space-y-4 pt-2">
               {mascotFeatures.map((item, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="h-8.5 w-8.5 rounded-xl bg-zinc-900 border border-zinc-950 text-white font-mono font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
-                    {item.num}
+                <ScrollReveal 
+                  key={idx}
+                  variant="fade-up" 
+                  delay={idx === 0 ? 'delay-75' : idx === 1 ? 'delay-150' : 'delay-225'}
+                >
+                  <div className="flex gap-4">
+                    <div className="h-8.5 w-8.5 rounded-xl bg-zinc-900 border border-zinc-950 text-white font-mono font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                      {item.num}
+                    </div>
+                    <div>
+                      <h4 className="font-sans font-extrabold text-zinc-950 text-sm leading-tight">{item.title}</h4>
+                      <p className="text-slate-500 text-xs mt-1.5 leading-relaxed font-sans font-semibold">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-sans font-extrabold text-zinc-950 text-sm leading-tight">{item.title}</h4>
-                    <p className="text-slate-500 text-xs mt-1.5 leading-relaxed font-sans font-semibold">{item.desc}</p>
-                  </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

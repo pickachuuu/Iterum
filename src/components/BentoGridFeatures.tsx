@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import ScrollReveal from './ScrollReveal'
 
 type FeatureStat = {
   label: string
@@ -21,21 +22,22 @@ export default function BentoGridFeatures() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Header */}
-        <div className="max-w-3xl mb-14 text-left">
-
-          <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
-            Meet the world's most structured preparation tool
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-550 leading-relaxed font-sans font-medium">
-            Iterum is built around a rigorous preparation methodology, removing the friction from mock interview training.
-          </p>
-        </div>
+        <ScrollReveal variant="fade-up">
+          <div className="max-w-3xl mb-14 text-left">
+            <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
+              Meet the world's most structured preparation tool
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-slate-550 leading-relaxed font-sans font-medium">
+              Iterum is built around a rigorous preparation methodology, removing the friction from mock interview training.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
           
           {/* Card 1: Wide top card (Core Simulation) */}
-          <div className="md:col-span-6 bg-gradient-to-br from-zinc-50 via-slate-50 to-zinc-100 rounded-3xl p-6 md:p-8 border border-zinc-200 text-slate-800 overflow-hidden relative transition-all duration-300 shadow-2xs hover:shadow-xs hover:border-zinc-300 group">
+          <ScrollReveal variant="scale-up" className="md:col-span-6 bg-gradient-to-br from-zinc-50 via-slate-50 to-zinc-100 rounded-3xl p-6 md:p-8 border border-zinc-200 text-slate-800 overflow-hidden relative transition-all duration-300 shadow-2xs hover:shadow-xs hover:border-zinc-300 group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 space-y-4">
                 <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider font-mono">
@@ -83,10 +85,10 @@ export default function BentoGridFeatures() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 2: Medium bottom left card (Resume Context) */}
-          <div className="md:col-span-3 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800/80 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between hover:shadow-lg hover:scale-[1.01] transition-all duration-300">
+          <ScrollReveal variant="fade-up" delay="delay-100" className="md:col-span-3 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800/80 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between hover:shadow-lg hover:scale-[1.01] transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">
                 02 / Resume Context upload
@@ -103,10 +105,10 @@ export default function BentoGridFeatures() {
               <span>Resume PDF upload</span>
               <span className="text-zinc-500">Secure Storage</span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 3: Medium bottom right card (Job Profiles) */}
-          <div className="md:col-span-3 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700/60 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between hover:shadow-lg hover:scale-[1.01] transition-all duration-300">
+          <ScrollReveal variant="fade-up" delay="delay-200" className="md:col-span-3 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700/60 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between hover:shadow-lg hover:scale-[1.01] transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">
                 03 / Job Profiles
@@ -126,10 +128,10 @@ export default function BentoGridFeatures() {
                 </span>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Card 4: Wide bottom card (AI Feedback & Followups) */}
-          <div className="md:col-span-6 bg-gradient-to-br from-slate-50 via-zinc-50 to-slate-100 border border-zinc-200 rounded-3xl p-6 md:p-8 transition-all duration-300 shadow-2xs hover:shadow-xs hover:border-zinc-300">
+          <ScrollReveal variant="scale-up" delay="delay-300" className="md:col-span-6 bg-gradient-to-br from-slate-50 via-zinc-50 to-slate-100 border border-zinc-200 rounded-3xl p-6 md:p-8 transition-all duration-300 shadow-2xs hover:shadow-xs hover:border-zinc-300">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 space-y-4">
                 <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider font-mono">
@@ -154,7 +156,7 @@ export default function BentoGridFeatures() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

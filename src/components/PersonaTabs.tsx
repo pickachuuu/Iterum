@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
+import ScrollReveal from './ScrollReveal'
 
 type PersonaTabId = 'swe' | 'pm' | 'ds' | 'sales' | 'career'
 
@@ -165,35 +166,38 @@ export default function PersonaTabs() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Header */}
-        <div className="max-w-3xl mb-14 text-left">
-
-          <h2 className="font-display text-4xl sm:text-5xl font-black text-white tracking-tight mt-4 leading-none">
-            Tailored preparation for your specific career path
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-zinc-400 leading-relaxed font-sans font-medium">
-            Iterum is custom-calibrated for engineers, managers, analysts, and transitioning professionals.
-          </p>
-        </div>
+        <ScrollReveal variant="fade-up">
+          <div className="max-w-3xl mb-14 text-left">
+            <h2 className="font-display text-4xl sm:text-5xl font-black text-white tracking-tight mt-4 leading-none">
+              Tailored preparation for your specific career path
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-zinc-400 leading-relaxed font-sans font-medium">
+              Iterum is custom-calibrated for engineers, managers, analysts, and transitioning professionals.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          {tabIds.map((key) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-5 py-2.5 rounded-full font-sans text-xs sm:text-sm font-bold border transition-all cursor-pointer ${
-                activeTab === key
-                  ? 'bg-white text-zinc-950 border-white shadow-md shadow-white/10'
-                  : 'bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:bg-zinc-850 hover:text-white'
-              }`}
-            >
-              <span>{tabData[key].title}</span>
-            </button>
-          ))}
-        </div>
+        <ScrollReveal variant="fade-up" delay="delay-100">
+          <div className="flex flex-wrap gap-2 mb-8">
+            {tabIds.map((key) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-5 py-2.5 rounded-full font-sans text-xs sm:text-sm font-bold border transition-all cursor-pointer ${
+                  activeTab === key
+                    ? 'bg-white text-zinc-950 border-white shadow-md shadow-white/10'
+                    : 'bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:bg-zinc-850 hover:text-white'
+                }`}
+              >
+                <span>{tabData[key].title}</span>
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
 
         {/* Details Card */}
-        <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl transition-all duration-200">
+        <ScrollReveal variant="scale-up" delay="delay-200" className="bg-zinc-900/40 border border-zinc-800/80 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl transition-all duration-200">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left side: Clean UI Preview representing actual spec items */}
@@ -242,7 +246,7 @@ export default function PersonaTabs() {
             </div>
 
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>
