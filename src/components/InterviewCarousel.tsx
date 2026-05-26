@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import type { LucideIcon } from 'lucide-react'
 import {
-  Compass,
   Activity,
   Layers,
   Shield,
@@ -9,10 +9,26 @@ import {
 } from 'lucide-react'
 import LogoSvg from './LogoSvg'
 
+type RoundHighlight = {
+  title: string
+  desc: string
+}
+
+type InterviewRound = {
+  num: string
+  title: string
+  vibe: string
+  soulQuote: string
+  icon: LucideIcon
+  colorClass: string
+  glowColor: string
+  highlights: RoundHighlight[]
+}
+
 export default function InterviewCarousel() {
   const [activeIndex, setActiveIndex] = useState(2) // Default to Behavioral Round
 
-  const rounds = [
+  const rounds: InterviewRound[] = [
     {
       num: '01',
       title: 'Discovery Screening',
@@ -130,7 +146,7 @@ export default function InterviewCarousel() {
     }
   ]
 
-  const activeRound = rounds[activeIndex] || rounds[2]
+  const activeRound = rounds[activeIndex] ?? rounds[2]
 
   return (
     <section id="rounds" className="relative py-28 bg-zinc-950 overflow-hidden border-y border-zinc-900">
@@ -179,9 +195,7 @@ export default function InterviewCarousel() {
         
         {/* Editorial Section Header */}
         <div className="max-w-4xl mb-20 text-left">
-          <span className="inline-flex items-center gap-2 text-xs font-extrabold text-white bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-full uppercase tracking-widest">
-            <Compass className="h-4.5 w-4.5 text-zinc-300 animate-spin" style={{ animationDuration: '6s' }} /> Segmented Practice Pathways
-          </span>
+
           <h2 className="font-display text-4xl sm:text-6xl font-black text-white tracking-tight mt-4 leading-none">
             An interactive compass of <br />
             <span className="bg-gradient-to-r from-white via-zinc-400 to-zinc-500 bg-clip-text text-transparent">your career milestone rounds</span>

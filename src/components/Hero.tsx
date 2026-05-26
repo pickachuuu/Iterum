@@ -1,16 +1,32 @@
 import { useState } from 'react'
 import { FileText, Briefcase, MessageSquare, Check, HelpCircle } from 'lucide-react'
 
-export default function Hero() {
-  const [activeProfile, setActiveProfile] = useState('swe')
+type ProfileId = 'swe' | 'pm' | 'ds'
 
-  const profiles = [
+type Profile = {
+  id: ProfileId
+  role: string
+  company: string
+  location: string
+}
+
+type PracticeQA = {
+  question: string
+  answer: string
+  feedback: string
+  followUp: string
+}
+
+export default function Hero() {
+  const [activeProfile, setActiveProfile] = useState<ProfileId>('swe')
+
+  const profiles: Profile[] = [
     { id: 'swe', role: 'Software Engineer', company: 'Google', location: 'Mountain View' },
     { id: 'pm', role: 'Product Manager', company: 'Stripe', location: 'San Francisco' },
     { id: 'ds', role: 'Data Scientist', company: 'Airbnb', location: 'Remote' }
   ]
 
-  const qaData = {
+  const qaData: Record<ProfileId, PracticeQA> = {
     swe: {
       question: "Your resume mentions leading a legacy database migration at Google. How did you handle schema migration without database read-write locks?",
       answer: "We implemented a dual-write process. First, we wrote data to both the legacy SQL database and the new search cluster, while continuing to read from the SQL base. After synchronizing historical data using a background worker, we verified data parity and shifted read operations to the new cluster before decommissioning the legacy writes.",
@@ -31,7 +47,7 @@ export default function Hero() {
     }
   }
 
-  const activeQA = qaData[activeProfile] || qaData['swe']
+  const activeQA = qaData[activeProfile]
 
   return (
     <header className="relative bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 pt-36 pb-36 overflow-hidden flex flex-col justify-center text-center">

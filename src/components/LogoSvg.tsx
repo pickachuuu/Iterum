@@ -1,4 +1,8 @@
-export default function LogoSvg({ className = "h-6 w-6", ...props }) {
+import type { SVGProps } from 'react'
+
+type LogoSvgProps = SVGProps<SVGSVGElement>
+
+export default function LogoSvg({ className = 'h-6 w-6', ...props }: LogoSvgProps) {
   return (
     <svg
       viewBox="0 0 24 24"

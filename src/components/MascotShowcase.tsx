@@ -1,4 +1,26 @@
-import { Sparkles } from 'lucide-react'
+type MascotFeature = {
+  num: string
+  title: string
+  desc: string
+}
+
+const mascotFeatures: MascotFeature[] = [
+  {
+    num: '01',
+    title: 'Resume Context Integration',
+    desc: 'Link your uploaded PDF resume to job profiles. The AI reads your experience, projects, and skills to generate personalized questions about technical decisions and leadership gaps.'
+  },
+  {
+    num: '02',
+    title: 'Tailored Practice Rounds',
+    desc: 'Select or create custom interview rounds (HR screen, behavioral, domain panels, hiring manager, or team fit) with dynamic, round-specific AI feedback.'
+  },
+  {
+    num: '03',
+    title: 'Secure Supabase Architecture',
+    desc: 'Sign in securely using Supabase Auth (OAuth or email/password). All uploaded resumes and database records are private, using Row-Level Security policies.'
+  }
+]
 
 export default function MascotShowcase() {
   return (
@@ -38,9 +60,7 @@ export default function MascotShowcase() {
           {/* Info column (7 cols) - Original Text Layout */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <span className="text-xs font-bold text-zinc-900 bg-zinc-100 border border-zinc-200/80 px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 w-fit">
-                <Sparkles className="h-3.5 w-3.5 text-zinc-750" /> Preparation Agile
-              </span>
+
               <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
                 Adapt seamlessly to any boardroom panel
               </h2>
@@ -51,23 +71,7 @@ export default function MascotShowcase() {
 
             {/* Simple, high-contrast vector bullet points matching the APP_SPEC */}
             <div className="space-y-4 pt-2">
-              {[
-                {
-                  num: '01',
-                  title: 'Resume Context Integration',
-                  desc: 'Link your uploaded PDF resume to job profiles. The AI reads your experience, projects, and skills to generate personalized questions about technical decisions and leadership gaps.'
-                },
-                {
-                  num: '02',
-                  title: 'Tailored Practice Rounds',
-                  desc: 'Select or create custom interview rounds (HR screen, behavioral, domain panels, hiring manager, or team fit) with dynamic, round-specific AI feedback.'
-                },
-                {
-                  num: '03',
-                  title: 'Secure Supabase Architecture',
-                  desc: 'Sign in securely using Supabase Auth (OAuth or email/password). All uploaded resumes and database records are private, using Row-Level Security policies.'
-                }
-              ].map((item, idx) => (
+              {mascotFeatures.map((item, idx) => (
                 <div key={idx} className="flex gap-4">
                   <div className="h-8.5 w-8.5 rounded-xl bg-zinc-900 border border-zinc-950 text-white font-mono font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                     {item.num}

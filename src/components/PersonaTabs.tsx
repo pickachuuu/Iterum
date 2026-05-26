@@ -1,9 +1,21 @@
 import { useState } from 'react'
+import type { ReactNode } from 'react'
+
+type PersonaTabId = 'swe' | 'pm' | 'ds' | 'sales' | 'career'
+
+type PersonaTab = {
+  title: string
+  tagline: string
+  desc: string
+  bullets: string[]
+  mockupTitle: string
+  mockupContent: ReactNode
+}
 
 export default function PersonaTabs() {
-  const [activeTab, setActiveTab] = useState('swe')
+  const [activeTab, setActiveTab] = useState<PersonaTabId>('swe')
 
-  const tabData = {
+  const tabData: Record<PersonaTabId, PersonaTab> = {
     swe: {
       title: 'Software Engineers',
       tagline: 'Review distributed scaling, algorithms, and technical deep-dives.',
@@ -145,7 +157,8 @@ export default function PersonaTabs() {
     }
   }
 
-  const currentTab = tabData[activeTab] || tabData['swe']
+  const currentTab = tabData[activeTab]
+  const tabIds = Object.keys(tabData) as PersonaTabId[]
 
   return (
     <section id="who" className="relative py-20 bg-zinc-950 border-b border-zinc-900 overflow-hidden">
@@ -153,9 +166,7 @@ export default function PersonaTabs() {
         
         {/* Header */}
         <div className="max-w-3xl mb-14 text-left">
-          <span className="text-xs font-bold text-white bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full uppercase tracking-widest">
-            Audience Segments
-          </span>
+
           <h2 className="font-display text-4xl sm:text-5xl font-black text-white tracking-tight mt-4 leading-none">
             Tailored preparation for your specific career path
           </h2>
@@ -166,7 +177,7 @@ export default function PersonaTabs() {
 
         {/* Tab Buttons */}
         <div className="flex flex-wrap gap-2 mb-8">
-          {Object.entries(tabData).map(([key, value]) => (
+          {tabIds.map((key) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -176,7 +187,7 @@ export default function PersonaTabs() {
                   : 'bg-zinc-900/60 text-zinc-400 border-zinc-800 hover:bg-zinc-850 hover:text-white'
               }`}
             >
-              <span>{value.title}</span>
+              <span>{tabData[key].title}</span>
             </button>
           ))}
         </div>

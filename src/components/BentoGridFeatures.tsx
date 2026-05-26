@@ -1,5 +1,20 @@
 import { Check } from 'lucide-react'
 
+type FeatureStat = {
+  label: string
+  val: string
+  sub: string
+  color: string
+}
+
+const profileFields = ['Company name', 'Role title', 'Job description', 'Required skills']
+
+const featureStats: FeatureStat[] = [
+  { label: 'AI FEEDBACK', val: 'Direct', sub: 'Constructive suggestions', color: 'text-zinc-950' },
+  { label: 'FOLLOW-UPS', val: 'Active', sub: 'Multi-turn details', color: 'text-zinc-800' },
+  { label: 'STORAGE', val: 'Private', sub: 'Row-Level Security', color: 'text-zinc-900' }
+]
+
 export default function BentoGridFeatures() {
   return (
     <section id="why" className="relative py-20 bg-[#f4f4f6] overflow-hidden border-b border-zinc-200/80">
@@ -7,9 +22,7 @@ export default function BentoGridFeatures() {
         
         {/* Header */}
         <div className="max-w-3xl mb-14 text-left">
-          <span className="text-xs font-bold text-zinc-950 bg-zinc-100 border border-zinc-200 px-3 py-1 rounded-full uppercase tracking-widest">
-            Platform Capabilities
-          </span>
+
           <h2 className="font-display text-4xl sm:text-5xl font-black text-zinc-950 tracking-tight mt-4 leading-none">
             Meet the world's most structured preparation tool
           </h2>
@@ -107,7 +120,7 @@ export default function BentoGridFeatures() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-2 pt-4 border-t border-zinc-700">
-              {['Company name', 'Role title', 'Job description', 'Required skills'].map(t => (
+              {profileFields.map(t => (
                 <span key={t} className="text-[9px] font-bold bg-white/5 text-slate-300 border border-white/10 px-2 py-0.5 rounded-md">
                   {t}
                 </span>
@@ -132,11 +145,7 @@ export default function BentoGridFeatures() {
 
               {/* Simple metrics grid */}
               <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {[
-                  { label: 'AI FEEDBACK', val: 'Direct', sub: 'Constructive suggestions', color: 'text-zinc-950' },
-                  { label: 'FOLLOW-UPS', val: 'Active', sub: 'Multi-turn details', color: 'text-zinc-800' },
-                  { label: 'STORAGE', val: 'Private', sub: 'Row-Level Security', color: 'text-zinc-900' }
-                ].map((s, i) => (
+                {featureStats.map((s, i) => (
                   <div key={i} className="bg-white border border-zinc-200 rounded-2xl p-4 shadow-2xs text-center hover:border-zinc-400 transition-colors duration-200">
                     <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">{s.label}</p>
                     <p className={`font-display text-lg font-black mt-2.5 ${s.color}`}>{s.val}</p>
