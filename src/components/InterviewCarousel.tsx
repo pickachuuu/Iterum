@@ -27,121 +27,121 @@ type InterviewRound = {
 }
 
 export default function InterviewCarousel() {
-  const [activeIndex, setActiveIndex] = useState(2) // Default to Behavioral Round
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const rounds: InterviewRound[] = [
     {
       num: '01',
-      title: 'Discovery Screening',
-      vibe: 'First impressions are structural.',
-      soulQuote: 'The gateway of alignment. It is where your career trajectory collides with the organization\'s immediate operational velocity and compensation benchmarks.',
+      title: 'HR Screening',
+      vibe: 'First impressions matter.',
+      soulQuote: 'This is the first gate. The recruiter wants to know who you are, what you\'ve done, and whether the basics line up — salary, timeline, and motivation.',
       icon: BookOpen,
       colorClass: 'from-zinc-800 to-zinc-950',
       glowColor: 'rgba(255, 255, 255, 0.08)',
       highlights: [
         {
-          title: 'Trajectory Calibration',
-          desc: 'Highlighting key career pivot points, past structural growth milestones, and future professional directions.'
+          title: 'Career Story',
+          desc: 'Walk through your career path clearly — key roles, why you moved, and where you\'re heading next.'
         },
         {
-          title: 'Expectation Alignment',
-          desc: 'Establishing shared parameters around salary structures, notice periods, and onboarding timelines.'
+          title: 'Expectations Check',
+          desc: 'Get comfortable talking about salary, start dates, and what you\'re actually looking for.'
         },
         {
-          title: 'Clarity of Purpose',
-          desc: 'Formulating a safe, highly engaging elevator summary free of technical jargon or corporate noise.'
+          title: 'Your Elevator Pitch',
+          desc: 'Nail a short, engaging summary of who you are and why you\'re right for this role.'
         }
       ]
     },
     {
       num: '02',
-      title: 'Strategic Auditing',
-      vibe: 'Execution is in the methodology.',
-      soulQuote: 'A deep-dive into your tactical engine. This is where your capacity to diagnose workflow bottlenecks, prioritize resources, and deploy operational frameworks is verified.',
+      title: 'Technical Deep-Dive',
+      vibe: 'Show what you know.',
+      soulQuote: 'This is where they test your skills. Expect questions about how you solve problems, build systems, and make decisions under real constraints.',
       icon: Layers,
       colorClass: 'from-zinc-700 to-zinc-900',
       glowColor: 'rgba(255, 255, 255, 0.08)',
       highlights: [
         {
-          title: 'Diagnostic Foresight',
-          desc: 'Identifying latent blockers, evaluating workflow constraints, and establishing strict operational risk mitigation.'
+          title: 'Problem Spotting',
+          desc: 'Show how you identify issues early and figure out the right fix before things break.'
         },
         {
-          title: 'Prioritization Matrices',
-          desc: 'Demonstrating a systematic, highly quantitative approach to task backlogs, scheduling, and competing milestones.'
+          title: 'Prioritization',
+          desc: 'Explain how you decide what to work on first when everything feels urgent.'
         },
         {
-          title: 'Quality Baselines',
-          desc: 'Setting uncompromising standards of excellence that guard deliverables against rapid scaling friction.'
+          title: 'Quality Standards',
+          desc: 'Demonstrate how you keep work reliable and high-quality even when moving fast.'
         }
       ]
     },
     {
       num: '03',
-      title: 'Behavioral Chemistry',
-      vibe: 'The art of storytelling under pressure.',
-      soulQuote: 'A showcase of execution leadership. We study not just the success you achieved, but the friction, escalation pathways, and stakeholder diplomacy you navigated to secure it.',
+      title: 'Behavioral Round',
+      vibe: 'Tell real stories.',
+      soulQuote: 'They want to hear about real situations — not just what you achieved, but how you handled conflict, pressure, and difficult teammates along the way.',
       icon: Activity,
       colorClass: 'from-slate-800 to-slate-950',
       glowColor: 'rgba(255, 255, 255, 0.08)',
       highlights: [
         {
-          title: 'STAR Synthesis',
-          desc: 'Crafting highly compelling, structured narratives with exact partitions: Situation, Task, Action, and Result.'
+          title: 'STAR Method',
+          desc: 'Structure your stories using Situation, Task, Action, and Result to keep answers clear and focused.'
         },
         {
-          title: 'Diplomatic Mediation',
-          desc: 'Balancing opposing organizational demands and renegotiating milestones without generating team friction.'
+          title: 'Handling Conflict',
+          desc: 'Show how you\'ve dealt with disagreements and tough situations without burning bridges.'
         },
         {
-          title: 'Quantified Impact',
-          desc: 'Linking strategic decisions directly to measurable business outcomes, percentages, or resource efficiency.'
+          title: 'Showing Results',
+          desc: 'Back up your stories with real numbers — revenue saved, time reduced, users impacted.'
         }
       ]
     },
     {
       num: '04',
-      title: 'Collaborative Consensus',
-      vibe: 'Alignment without friction.',
-      soulQuote: 'Evaluating active synergy. This is where we measure your capacity to absorb critical perspectives, align cross-functional dependencies, and champion workplace integrity.',
+      title: 'Cross-Team Panel',
+      vibe: 'Working with others.',
+      soulQuote: 'This round tests how well you play with other teams. Can you take feedback, collaborate across departments, and fit into the culture without friction?',
       icon: HeartHandshake,
       colorClass: 'from-neutral-700 to-neutral-900',
       glowColor: 'rgba(255, 255, 255, 0.08)',
       highlights: [
         {
-          title: 'Active Assimilation',
-          desc: 'Welcoming and integrating complex cross-department feedback loops without defensive barriers.'
+          title: 'Taking Feedback',
+          desc: 'Show that you can listen to people from different teams and use their input constructively.'
         },
         {
-          title: 'Dependency Mapping',
-          desc: 'Aligning competitive incentives across commercial, product, and operational lines to establish win-win bridges.'
+          title: 'Working Across Teams',
+          desc: 'Explain how you\'ve collaborated with people outside your immediate team to get things done.'
         },
         {
-          title: 'Cultural Acceleration',
-          desc: 'Acting as a professional multiplier, actively enriching team chemistry and shared values.'
+          title: 'Culture Fit',
+          desc: 'Demonstrate that you make the people around you better and bring positive energy to the team.'
         }
       ]
     },
     {
       num: '05',
-      title: 'Executive Vision Sync',
-      vibe: 'Building the 90-day roadmap.',
-      soulQuote: 'The final strategic alignment. You sit with organizational leadership to map your immediate onboarding trajectory directly against the multi-year business roadmap.',
+      title: 'Hiring Manager Final',
+      vibe: 'Your 90-day plan.',
+      soulQuote: 'The last conversation. The hiring manager wants to know what you\'ll actually do in your first 30, 60, and 90 days — and whether you can think long-term.',
       icon: Shield,
       colorClass: 'from-slate-700 to-zinc-900',
       glowColor: 'rgba(255, 255, 255, 0.08)',
       highlights: [
         {
-          title: 'Roadmap Architecture',
-          desc: 'Designing a realistic, crawl-walk-run sequence outlining high-leverage outputs for your first 30, 60, and 90 days.'
+          title: '30-60-90 Day Plan',
+          desc: 'Map out what you\'d focus on in your first three months — learning, contributing, and leading.'
         },
         {
-          title: 'Scale Integrity',
-          desc: 'Expanding departmental velocity and scope safely without causing structural team strain.'
+          title: 'Growing Without Breaking Things',
+          desc: 'Show how you\'d scale your team or projects without creating chaos or burning people out.'
         },
         {
-          title: 'Commercial Calibration',
-          desc: 'Translating daily operational outputs directly into target business margins and customer value.'
+          title: 'Connecting Work to Business Goals',
+          desc: 'Explain how your day-to-day work would directly help the company hit its targets.'
         }
       ]
     }
@@ -150,7 +150,7 @@ export default function InterviewCarousel() {
   const activeRound = rounds[activeIndex] ?? rounds[2]
 
   return (
-    <section id="rounds" className="relative py-28 bg-zinc-950 overflow-hidden border-y border-zinc-900">
+    <section id="rounds" className="relative py-28 overflow-hidden border-y border-zinc-900">
       
       {/* Dynamic styles for responsive orbital radius and rotation elements */}
       <style dangerouslySetInnerHTML={{__html: `
@@ -196,11 +196,11 @@ export default function InterviewCarousel() {
         <ScrollReveal variant="fade-up">
           <div className="max-w-4xl mb-20 text-left">
             <h2 className="font-display text-4xl sm:text-6xl font-black text-white tracking-tight mt-4 leading-none">
-              An interactive compass of <br />
-              <span className="bg-gradient-to-r from-white via-zinc-400 to-zinc-500 bg-clip-text text-transparent">your career milestone rounds</span>
+              Every round of <br />
+              <span className="bg-gradient-to-r from-white via-zinc-400 to-zinc-500 bg-clip-text text-transparent">your interview, covered</span>
             </h2>
             <p className="mt-6 text-lg sm:text-xl text-zinc-300 leading-relaxed font-sans font-medium max-w-3xl">
-              Prepare across the entire assessment loop. Iterum maps, structures, and elevates every interview conversation. Click on a node of the radial track below to explore the roadmap.
+              Most interviews have 5 stages — from the first recruiter call to the final hiring manager conversation. Click on each round below to see what to expect and how to prepare.
             </p>
           </div>
         </ScrollReveal>
@@ -306,9 +306,8 @@ export default function InterviewCarousel() {
                 </div>
 
                 {/* Central Fixed Branding Emblem - Overhauled to Stark Contrast Silver/Chalk luxury cap */}
-                <div className="relative h-24 w-24 md:h-28 md:w-28 rounded-full bg-gradient-to-b from-white via-zinc-150 to-zinc-300 border-4 border-zinc-800 shadow-[0_8px_30px_rgba(0,0,0,0.6)] flex flex-col items-center justify-center z-10 select-none">
-                  <div className="h-8 w-8 text-zinc-950"><LogoSvg /></div>
-                  <span className="text-[8px] font-black text-zinc-950 uppercase tracking-widest mt-1.5 font-mono">ITERUM CORE</span>
+                <div className="relative h-28 w-28 md:h-32 md:w-32 rounded-full bg-gradient-to-b from-white via-zinc-150 to-zinc-300 border-4 border-zinc-800 shadow-[0_8px_30px_rgba(0,0,0,0.6)] flex items-center justify-center z-10 select-none">
+                  <LogoSvg className="block h-16 w-16 md:h-[4.5rem] md:w-[4.5rem] text-zinc-950" />
                 </div>
 
               </div>
