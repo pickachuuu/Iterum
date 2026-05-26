@@ -46,127 +46,59 @@ export default function Footer({ onStartFreeClick }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#f4f4f6] text-slate-650 pt-20 pb-12 border-t border-zinc-200/80 overflow-hidden">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 space-y-16">
+    <footer className="relative bg-zinc-950 text-zinc-400 pt-20 pb-12 border-t border-zinc-900 overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 space-y-12">
         
-        {/* Crisp White CTA card */}
-        <div className="bg-white border border-slate-200 hover:border-zinc-500/30 rounded-3xl p-8 md:p-10 text-center space-y-5 max-w-4xl mx-auto shadow-2xs relative transition-colors duration-300">
-          <h3 className="font-display font-black text-slate-900 text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug">
+        {/* Premium Dark Glassmorphic CTA card */}
+        <div className="bg-zinc-900/40 border border-zinc-800/85 hover:border-zinc-700/60 rounded-3xl p-8 md:p-10 text-center space-y-5 max-w-4xl mx-auto shadow-2xl backdrop-blur-md relative transition-all duration-300">
+          <h3 className="font-display font-black text-white text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug">
             Ready to structure your interview practice?
           </h3>
-          <p className="text-slate-500 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-sans font-semibold">
+          <p className="text-zinc-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed font-sans font-semibold">
             Join candidates from top engineering and product teams who rehearse their career stories with Vance’s adaptive mockup panels.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <button 
               onClick={onStartFreeClick}
-              className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-zinc-950 hover:bg-zinc-900 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md shadow-zinc-950/20 border border-zinc-800"
+              className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-zinc-100 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md border border-white"
             >
               Start preparing free
             </button>
-            <button className="w-full sm:w-auto font-sans font-bold text-xs text-slate-700 bg-white border border-slate-350 hover:bg-slate-50 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-3xs">
+            <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-zinc-900/40 border border-zinc-800 hover:bg-zinc-850 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-sm">
               View study metrics
             </button>
           </div>
         </div>
 
-        {/* Directory grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-8 border-t border-slate-200/50">
-          
-          {/* Column 1: Rounds supported */}
-          <div className="space-y-3.5">
-            <h4 className="font-sans font-bold text-slate-900 text-xs tracking-wider uppercase">AI Practice Rounds</h4>
-            <ul className="space-y-2 text-xs font-sans font-medium">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Behavioral Round</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Technical Screen</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Coding Panel</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">System Design</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Recruiter Sync</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">HR Screening</a></li>
-            </ul>
-          </div>
-
-          {/* Column 2: Tech Stack planned */}
-          <div className="space-y-3.5">
-            <h4 className="font-sans font-bold text-slate-900 text-xs tracking-wider uppercase">Planned Tech Stack</h4>
-            <ul className="space-y-2 text-xs font-sans font-medium">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">React 19 Frontend</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Tailwind CSS 4</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Supabase Auth Layer</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Supabase Edge Functions</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">TanStack Query Caching</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Zustand Client State</a></li>
-            </ul>
-          </div>
-
-          {/* Column 3: Core Features */}
-          <div className="space-y-3.5">
-            <h4 className="font-sans font-bold text-slate-900 text-xs tracking-wider uppercase">Core Features</h4>
-            <ul className="space-y-2 text-xs font-sans font-medium">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Opportunity Profiles</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">PDF Resume Upload</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">AI Question Generator</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Constructive Feedback</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Follow-up Questions</a></li>
-            </ul>
-          </div>
-
-          {/* Column 4: Legitimate Company resources */}
-          <div className="space-y-3.5">
-            <h4 className="font-sans font-bold text-slate-900 text-xs tracking-wider uppercase">Company</h4>
-            <ul className="space-y-2 text-xs font-sans font-medium">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Why Iterum</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Supabase Database</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Supabase Storage</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Row-Level Security</a></li>
-            </ul>
-          </div>
-
-          {/* Column 5: Future Roadmap Ideas from spec */}
-          <div className="space-y-3.5">
-            <h4 className="font-sans font-bold text-slate-900 text-xs tracking-wider uppercase">Future Roadmap</h4>
-            <ul className="space-y-2 text-xs font-sans font-medium">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Practice Streaks & Plans</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Voice Interview Simulator</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Scoring by Round metrics</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Company Templates</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Exportable PDF Reports</a></li>
-            </ul>
-          </div>
-
-        </div>
-
         {/* Footer bottom */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 pt-10 border-t border-slate-200/50 text-slate-550">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 pt-10 border-t border-zinc-900 text-zinc-500">
           
           {/* Logo & corporate address */}
           <div className="space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-zinc-950 text-white shadow-sm border border-zinc-850">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white text-zinc-950 shadow-sm border border-zinc-200">
                 <LogoSvg className="h-4.5 w-4.5" />
               </div>
-              <span className="font-display text-lg font-bold tracking-tight text-zinc-950">
-                Iterum<span className="text-slate-400 font-normal">.ai</span>
+              <span className="font-display text-lg font-bold tracking-tight text-white">
+                Iterum<span className="text-zinc-500 font-normal">.ai</span>
               </span>
             </div>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
-              Iterum Inc. • 100 Battery Street, Suite 100, San Francisco, CA 94111, USA.<br />
-              Secure databases supported by Supabase. Email support at <a href="mailto:support@iterum.ai" className="text-slate-700 hover:text-slate-900 font-semibold transition-colors">support@iterum.ai</a>
+            <p className="text-xs text-zinc-500 leading-relaxed font-sans">
+              Secure databases supported by Supabase. Email support at <a href="mailto:support@iterum.ai" className="text-zinc-300 hover:text-white font-semibold transition-colors">support@iterum.ai</a>
             </p>
           </div>
 
           {/* Social connections & copyright */}
           <div className="flex flex-col md:items-end gap-4">
-            <div className="flex items-center gap-4 text-slate-400">
-              <a href="#" className="hover:text-slate-800 transition-colors"><FacebookIcon className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-slate-800 transition-colors"><TwitterIcon className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-slate-800 transition-colors"><InstagramIcon className="h-4 w-4" /></a>
-              <a href="#" className="hover:text-slate-800 transition-colors"><YoutubeIcon className="h-4.5 w-4.5" /></a>
-              <a href="#" className="hover:text-slate-800 transition-colors"><LinkedinIcon className="h-4 w-4" /></a>
+            <div className="flex items-center gap-4 text-zinc-500">
+              <a href="#" className="hover:text-white transition-colors"><FacebookIcon className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-white transition-colors"><TwitterIcon className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-white transition-colors"><InstagramIcon className="h-4 w-4" /></a>
+              <a href="#" className="hover:text-white transition-colors"><YoutubeIcon className="h-4.5 w-4.5" /></a>
+              <a href="#" className="hover:text-white transition-colors"><LinkedinIcon className="h-4 w-4" /></a>
             </div>
 
-            <div className="text-xs text-slate-400 font-sans md:text-right">
+            <div className="text-xs text-zinc-550 font-sans md:text-right">
               <p>© {currentYear} Iterum.ai. All rights reserved. All mock records held in privacy configurations.</p>
             </div>
           </div>
