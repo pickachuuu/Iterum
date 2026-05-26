@@ -17,7 +17,11 @@ type PracticeQA = {
   followUp: string
 }
 
-export default function Hero() {
+interface HeroProps {
+  onStartFreeClick: () => void
+}
+
+export default function Hero({ onStartFreeClick }: HeroProps) {
   const [activeProfile, setActiveProfile] = useState<ProfileId>('swe')
 
   const profiles: Profile[] = [
@@ -70,7 +74,10 @@ export default function Hero() {
 
         {/* Noir Premium Action Buttons */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4.5">
-          <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-slate-100 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-white/5 transition-all cursor-pointer border border-white/10">
+          <button 
+            onClick={onStartFreeClick}
+            className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-zinc-950 bg-white hover:bg-slate-100 active:scale-98 px-8 py-4.5 rounded-full shadow-lg shadow-white/5 transition-all cursor-pointer border border-white/10"
+          >
             Start practicing free
           </button>
           <button className="w-full sm:w-auto font-sans font-bold text-xs text-white bg-zinc-900/40 border border-zinc-800 hover:bg-zinc-850 active:scale-98 px-8 py-4.5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm">

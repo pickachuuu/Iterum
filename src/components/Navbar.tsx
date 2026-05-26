@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import LogoSvg from './LogoSvg'
 
-export default function Navbar() {
+interface NavbarProps {
+  onLoginClick: () => void
+  onRegisterClick: () => void
+}
+
+export default function Navbar({ onLoginClick, onRegisterClick }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -60,16 +65,22 @@ export default function Navbar() {
 
           {/* Clean Action CTAs */}
           <div className="hidden md:flex items-center gap-4">
-            <button className={`text-sm font-bold transition-colors duration-300 py-2 px-3 cursor-pointer ${
-              isScrolled ? 'text-slate-650 hover:text-zinc-950' : 'text-white/90 hover:text-white'
-            }`}>
+            <button 
+              onClick={onLoginClick}
+              className={`text-sm font-bold transition-colors duration-300 py-2 px-3 cursor-pointer ${
+                isScrolled ? 'text-slate-650 hover:text-zinc-950' : 'text-white/90 hover:text-white'
+              }`}
+            >
               Login
             </button>
-            <button className={`text-xs font-black uppercase tracking-wider transition-all cursor-pointer shadow-md rounded-full px-6 py-2.5 active:scale-98 border ${
-              isScrolled 
-                ? 'bg-zinc-950 hover:bg-zinc-900 border-zinc-800 text-white shadow-zinc-950/10' 
-                : 'bg-white hover:bg-slate-100 text-zinc-950 border-transparent shadow-white/5'
-            }`}>
+            <button 
+              onClick={onRegisterClick}
+              className={`text-xs font-black uppercase tracking-wider transition-all cursor-pointer shadow-md rounded-full px-6 py-2.5 active:scale-98 border ${
+                isScrolled 
+                  ? 'bg-zinc-950 hover:bg-zinc-900 border-zinc-800 text-white shadow-zinc-950/10' 
+                  : 'bg-white hover:bg-slate-100 text-zinc-950 border-transparent shadow-white/5'
+              }`}
+            >
               Start Free
             </button>
           </div>
@@ -116,10 +127,16 @@ export default function Navbar() {
           <hr className="border-slate-100" />
 
           <div className="flex flex-col gap-2.5">
-            <button className="w-full text-center text-slate-700 border border-slate-200 py-2.5 rounded-full hover:bg-slate-50 text-sm font-semibold cursor-pointer">
+            <button 
+              onClick={() => { onLoginClick(); setMobileMenuOpen(false); }}
+              className="w-full text-center text-slate-700 border border-slate-200 py-2.5 rounded-full hover:bg-slate-50 text-sm font-semibold cursor-pointer"
+            >
               Login
             </button>
-            <button className="w-full text-center text-white bg-zinc-950 border border-zinc-800 py-2.5 rounded-full hover:bg-zinc-900 text-sm font-bold shadow-md cursor-pointer">
+            <button 
+              onClick={() => { onRegisterClick(); setMobileMenuOpen(false); }}
+              className="w-full text-center text-white bg-zinc-950 border border-zinc-800 py-2.5 rounded-full hover:bg-zinc-900 text-sm font-bold shadow-md cursor-pointer"
+            >
               Start Free
             </button>
           </div>

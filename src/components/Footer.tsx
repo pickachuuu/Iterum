@@ -38,7 +38,11 @@ const LinkedinIcon = (props: IconProps) => (
   </svg>
 )
 
-export default function Footer() {
+interface FooterProps {
+  onStartFreeClick: () => void
+}
+
+export default function Footer({ onStartFreeClick }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   return (
@@ -54,7 +58,10 @@ export default function Footer() {
             Join candidates from top engineering and product teams who rehearse their career stories with Vance’s adaptive mockup panels.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <button className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-zinc-950 hover:bg-zinc-900 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md shadow-zinc-950/20 border border-zinc-800">
+            <button 
+              onClick={onStartFreeClick}
+              className="w-full sm:w-auto font-sans font-black uppercase tracking-wider text-xs text-white bg-zinc-950 hover:bg-zinc-900 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-md shadow-zinc-950/20 border border-zinc-800"
+            >
               Start preparing free
             </button>
             <button className="w-full sm:w-auto font-sans font-bold text-xs text-slate-700 bg-white border border-slate-350 hover:bg-slate-50 active:scale-98 px-8 py-3.5 rounded-full transition-all cursor-pointer shadow-3xs">
